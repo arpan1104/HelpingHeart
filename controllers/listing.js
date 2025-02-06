@@ -197,7 +197,7 @@ module.exports.createNewListing = async (req, res) => {
                     let mailOptions = {
                         from: "otp11571@gmail.com",
                         to: user.email,
-                        subject: "Important Announcement",
+                        subject: `Important Announcement from: ${newListing.organizationName}`,
                         text: "Hurry Up Event is about to end"
                     };
 
