@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplate") %>
 <div class="row mt-3">
   <div class="col-8 offset-2">
-    <h3>Register a New Event</h3>
+    <h3>Add your Property</h3>
 
     <form method="POST" action="/listings" class="needs-validation" novalidate enctype="multipart/form-data">
       <div class="mb-3 mt-3">
@@ -13,11 +13,11 @@
       </div>
 
       <div class="mb-3">
-        <label for="eventName" class="form-label">Event Name</label>
-        <input name="listing[eventName]" placeholder="Add a catchy event name" type="text" class="form-control"
+        <label for="eventName" class="form-label">Property Name</label>
+        <input name="listing[eventName]" placeholder="Add a catchy name" type="text" class="form-control"
           required />
         <div class="valid-feedback">Looks good!</div>
-        <div class="invalid-feedback">Please enter a valid event name</div>
+        <div class="invalid-feedback">Please enter a valid name</div>
       </div>
 
       <div class="mb-3">
