@@ -343,7 +343,7 @@ module.exports.sendEmail = async (req, res) => {
             });
         });
 
-        req.flash("success", "Email sent to all volunteers!");
+        req.flash("success", "Email sent to all Users!");
         res.redirect(`/listings/${id}`);
 
     } catch (error) {
