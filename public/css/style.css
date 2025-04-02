@@ -1,4 +1,4 @@
-body{
+body {
     font-family: "Plus Jakarta Sans", sans-serif !important;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -6,144 +6,219 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    background-color: #f7f7f7; /* Light grey background for a soft base */
+    color: #484848; /* Airbnb's dark grey text */
 }
 
-.container{
-    flex:1;
+.container {
+    flex: 1;
+    max-width: 1200px; /* Constrain content width for readability */
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
-.navbar{
+.navbar {
     height: 5rem;
-    background-color: white;
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
-.navbar-collapse{
+
+.navbar-collapse {
     border-radius: 10px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 0.5rem 1rem;
 }
 
-.fa-compass{
-    color: #fe242d;
+.fa-compass {
+    color: #ff385c; /* Airbnb’s coral red */
     font-size: 2rem;
+    transition: transform 0.3s ease; /* Smooth animation */
 }
 
-.nav-link{
-    color: #222222  !important;
+.fa-compass:hover {
+    transform: rotate(15deg); /* Playful hover effect */
 }
 
-.f-info-links a{
+.nav-link {
+    color: #222222 !important;
+    font-weight: 500;
+    padding: 0.75rem 1rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ff385c !important; /* Coral red on hover */
+}
+
+.f-info-links a {
     text-decoration: none;
+    color: #484848;
+    margin: 0 0.75rem;
+    font-size: 0.9rem;
 }
 
-.f-info-links a:hover{
-    text-decoration:underline;
+.f-info-links a:hover {
+    text-decoration: underline;
+    color: #ff385c;
 }
 
-.f-info-links, .f-info-socials, .f-info-brand{
+.f-info-links, .f-info-socials, .f-info-brand {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0.5rem 0;
 }
 
-.f-info-socials i{
-    margin-right: 1rem;
+.f-info-socials i {
+    margin: 0 1rem;
     font-size: 1.2rem;
+    color: #484848;
+    transition: color 0.2s ease;
 }
 
-.f-info{
+.f-info-socials i:hover {
+    color: #ff385c;
+}
+
+.f-info {
     text-align: center;
     height: 8rem;
-    background-color: #ebebeb;
+    background-color: #f1f1f1; /* Slightly lighter footer */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
+    align-items: center;
+    border-top: 1px solid #ddd;
 }
 
-.listing-card{
+.listing-card {
     padding-top: 1rem;
     border: none !important;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 1.5rem; /* Softer corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); /* Subtle elevation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card-img-top{
-    border-radius: 1rem !important;
+.listing-card:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    border-radius: 1.5rem 1.5rem 0 0 !important; /* Rounded top corners */
     width: 100% !important;
+    height: 200px; /* Fixed height for consistency */
     object-fit: cover !important;
 }
 
-.card-body{
-    padding: 0 !important;
+.card-body {
+    padding: 1rem !important; /* Consistent padding */
 }
 
-.card-text{
+.card-text {
     font-weight: 400 !important;
+    color: #717171; /* Softer grey for secondary text */
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
-.listing-link{
-    text-decoration: none;
-}
-
-
-
-.card-img-overlay{
-    opacity:0;
-}
-
-.card-img-overlay:hover{
-    opacity: 0.5;
-    background-color: white;
-    font-weight: 400;
-}
-.card-title{
+.card-title {
     padding-top: 0.4rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #222222;
+}
+
+.listing-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-img-overlay {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.6;
+    background-color: rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+    color: #ff385c;
 }
 
 #map { 
     height: 400px;
     width: 100%;
-    border-radius: 2.5rem;
- }
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
 
-/* .btn-danger{
-    margin-left: 3rem;
-} */
-
-.add-btn{
-    background-color: #fe424d !important;
+.add-btn, .edit-btn {
+    background-color: #ff385c !important; /* Airbnb coral */
     border: none !important;
+    padding: 0.75rem 1.5rem;
+    font-weight: 500;
+    border-radius: 2rem; /* Pill-shaped buttons */
+    transition: background-color 0.2s ease;
 }
 
-.edit-btn{
-    background-color: #fe424d !important;
-    border: none !important;
+.add-btn:hover, .edit-btn:hover {
+    background-color: #e31c5f !important; /* Darker coral on hover */
 }
 
-.show-img{
-    height:30vh;
+.show-img {
+    height: 30vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 1.5rem;
 }
 
-.btns{
-    display:flex;
+.btns {
+    display: flex;
+    gap: 1rem; /* Better spacing between buttons */
     padding-right: 1rem !important;
 }
-.botin{
-margin-right: 1rem;
+
+.botin {
+    margin-right: 1rem;
 }
 
-.show-card{
-    padding:0;
-    padding-right: 0;
+.show-card {
+    padding: 0;
+    background-color: #ffffff;
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
-.review-card{
-    border: black;
+.review-card {
+    border: none;
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
 }
 
-#error{
+#error, #success {
     display: none;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    margin: 1rem 0;
 }
 
-#success{
-    display: none;
+#error {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+#success {
+    background-color: #e8f5e9;
+    color: #2e7d32;
 }
