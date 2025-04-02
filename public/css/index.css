@@ -2,40 +2,60 @@
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-  }
+    padding: 1rem 0; /* Added padding for breathing room */
+    max-width: 1200px; /* Consistent with container width */
+    margin: 0 auto; /* Centered alignment */
+}
 
-  .filter {
+.filter {
     text-align: center;
     margin-right: 2rem;
     margin-top: 2rem;
     opacity: 0.7;
-  }
+    color: #484848; /* Airbnb’s dark grey */
+    font-weight: 500; /* Slightly bolder for emphasis */
+    transition: opacity 0.2s ease, transform 0.2s ease; /* Smooth hover effects */
+}
 
-  .filter:hover {
+.filter:hover {
     opacity: 1;
     cursor: pointer;
-  }
+    transform: scale(1.05); /* Subtle scale-up for interactivity */
+}
 
-  .filter p {
+.filter p {
     font-size: 0.8rem;
-  }
+    margin: 0.25rem 0 0; /* Small top margin for spacing */
+    color: #717171; /* Softer grey for secondary text */
+}
 
-  .tax-info {
+.tax-info {
     display: inline;
-  }
+    font-size: 0.9rem; /* Slightly larger for readability */
+    color: #484848; /* Consistent text color */
+}
 
-  .tax-toggle {
-    border: 1px solid black;
+.tax-toggle {
+    border: 1px solid #ddd; /* Softer, Airbnb-style border */
     border-radius: 1rem;
     height: 3.25rem;
     padding: 1rem;
     margin-left: 2rem;
     display: flex;
     align-items: center;
-  }
-  .without-gst{
+    background-color: #ffffff; /* White background for contrast */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: border-color 0.2s ease; /* Smooth border transition */
+}
+
+.tax-toggle:hover {
+    border-color: #ff385c; /* Coral accent on hover */
+}
+
+.without-gst {
     display: inline;
-  }
-  .with-gst{
+}
+
+.with-gst {
     display: none;
-  }
+}
