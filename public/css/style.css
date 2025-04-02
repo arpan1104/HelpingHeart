@@ -222,3 +222,42 @@ body {
     background-color: #e8f5e9;
     color: #2e7d32;
 }
+
+.review-card {
+    border: none;
+    background-color: #ffffff;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between image and text */
+    width: 100%; /* Ensure it takes full width of the column */
+    max-width: 250px; /* Constrain width for better layout */
+}
+
+.review-card .card-body {
+    padding: 0; /* Remove default padding to control spacing */
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.review-card img {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    margin-right: 0; /* Let gap handle spacing */
+}
+
+.review-card .card-text {
+    font-weight: 500;
+    color: #484848;
+    font-size: 0.95rem;
+    margin: 0; /* Remove default margin */
+    white-space: nowrap; /* Prevent username wrapping */
+    overflow: hidden;
+    text-overflow: ellipsis; /* Handle long usernames gracefully */
+}
