@@ -33,7 +33,7 @@ module.exports.searchBySkill = async (req, res) => {
 
 
         if (!listings) {
-            req.flash("error", "No results for this skills!");
+            req.flash("error", "No results for this Category!");
             return res.redirect("/listings");
         } else {
 
