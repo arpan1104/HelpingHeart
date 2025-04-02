@@ -37,7 +37,7 @@ module.exports.searchBySkill = async (req, res) => {
             return res.redirect("/listings");
         } else {
 
-            req.flash("success", "Events found for this skill!");
+            req.flash("success", "Properties based on Category");
             res.render("listings/index.ejs", {
                 listings
             });
@@ -103,7 +103,7 @@ module.exports.findListings = async (req, res) => {
         }
     });
     if (!listingsWithinRadius) {
-        req.flash("error", "No events found near you!");
+        req.flash("error", "No Propeeties found near you!");
         return;
     }
     let gstPrice = [];
@@ -214,7 +214,7 @@ module.exports.createNewListing = async (req, res) => {
             });
         }
         else {
-            req.flash("error", "No users near the event")
+            req.flash("error", "No users near this")
             res.redirect('/listings')
         }
 
