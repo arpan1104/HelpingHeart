@@ -34,6 +34,7 @@ const listingSchema = new Schema({
     },
   },
   skills:String,
+  price:String,
   image: {
     filename: String,
     url: String,
